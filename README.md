@@ -1,4 +1,5 @@
 
+![Download Dataset](https://github.com/fcamuz/time-series-model-for-forecasting/blob/master/images/Slide1.png)
 
 # Time Series Model for Real Estate Investment Company
 
@@ -23,14 +24,13 @@ I have used following aproach to complete this project
 
 ## Presentation 
 
-![Download Dataset](https://github.com/fcamuz/time-series-model-for-forecasting/blob/master/images/Slide1.png)
-
-
-Click here to watch the presentation for non-technical audience.
+You may watch the presentation for non-technical audience from the link below.
 
 https://www.youtube.com/watch?v=M_ue4RZJmTQ
 
-Link for the pdf is ![here](https://github.com/fcamuz/time-series-model-for-forecasting/blob/master/Real_Estate_Investment.pdf)
+Link for the pdf is below.
+
+![Real_Estate_Investment.pdf](https://github.com/fcamuz/time-series-model-for-forecasting/blob/master/Real_Estate_Investment.pdf)
  
  ## Table of Contents
 - Step 1: Load the Data
@@ -89,7 +89,7 @@ def convert_to_ts (df):
 ![Download Dataset](https://github.com/fcamuz/time-series-model-for-forecasting/blob/master/images/download6.png)
 
 
-### Investigating the components of time series data for TOP 10 Zipcodes
+# Step 4: Investigating the components of time series data for TOP 10 Zipcodes
 
 Visualisation can give us a great deal of information about time series. 
 I will use plots to check; 
@@ -146,7 +146,7 @@ With this I got parameters visualizations for each zipcode like one below
 
 None of the columns in the time series data is stationary. So I will use ARIMA Model since it can handle non-stationary data. I will do grid search to figure out best combinations for the necessary parameters.
  
- ## ARIMA Modelling
+ # Step 5:ARIMA Modelling
 
  I have done modelling with Arima and filtered the forecasted data by the growth rate. I used top 5 zipcodes series, their best parameter combinations to run the model one more time and create plot for the historical data and forcasted data. It also shades the predictions confidence interval. At the bottom of each plot, there is a detailed report for that zipcode. Last set of plots are the plot diagnostics with results calculated in the model. I got this report like one below for 5 zipcodes
 
@@ -170,7 +170,7 @@ Possible range : 1231511.0  -  1997400.0
 
 ![parameters ](https://github.com/fcamuz/time-series-model-for-forecasting/blob/master/images/download8.png)
 
-###3 Assumptions for the model have met
+### 3 Assumptions for the model have met
 
 From the diognostics plot, we can see if the assumptions met to make sure the model works properly.Residuals resamble white noise and it's KDE has normal distribution with mean 0 and standard deviation of 1.Also, the qq-plot shows that the ordered distribution of residuals mostly follows the linear trend of the samples taken from a standard normal distribution These indicate that the residuals are normally distributed. Correlogram shows that the time series residuals have low correlation with lagged versions of itself.
 
