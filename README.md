@@ -89,7 +89,7 @@ def convert_to_ts (df):
 ![Download Dataset](https://github.com/fcamuz/time-series-model-for-forecasting/blob/master/images/download6.png)
 
 
-# Step 4: Investigating the components of time series data for TOP 10 Zipcodes
+## Investigating the components of time series data for TOP 10 Zipcodes
 
 Visualisation can give us a great deal of information about time series. 
 I will use plots to check; 
@@ -146,7 +146,7 @@ With this I got parameters visualizations for each zipcode like one below
 
 None of the columns in the time series data is stationary. So I will use ARIMA Model since it can handle non-stationary data. I will do grid search to figure out best combinations for the necessary parameters.
  
- # Step 5:ARIMA Modelling
+ ## ARIMA Modelling
 
  I have done modelling with Arima and filtered the forecasted data by the growth rate. I used top 5 zipcodes series, their best parameter combinations to run the model one more time and create plot for the historical data and forcasted data. It also shades the predictions confidence interval. At the bottom of each plot, there is a detailed report for that zipcode. Last set of plots are the plot diagnostics with results calculated in the model. I got this report like one below for 5 zipcodes
 
@@ -176,7 +176,7 @@ From the diognostics plot, we can see if the assumptions met to make sure the mo
 
 According to the plots above, all columns seem met the assumptions. KDE histogram and Q-Q plot indicates some outliers in a few zipcodes, that makes the confidence interval wider.But data seem too be ok for this model mostly.
 
-# Step 6: Performence of ARIMA Model
+## Performence of ARIMA Model
 
 I visually checked the performence of ARIMA forecasting for selected Zipcode. 
 
@@ -269,7 +269,7 @@ Report for forecasting 5 years
 ![parameters ](https://github.com/fcamuz/time-series-model-for-forecasting/blob/master/images/report2.png)
 
 
-# Step 7: Modelling with Facebook Prophet
+## Modelling with Facebook Prophet
 
 ```python
 from fbprophet import Prophet as proph
@@ -331,7 +331,7 @@ Increase rate in 3 years (%) : 0.2
 ![parameters ](https://github.com/fcamuz/time-series-model-for-forecasting/blob/master/images/download10.png)
 
 
-# Step 8: Conclusion
+## Conclusion
 
 ![parameters ](https://github.com/fcamuz/time-series-model-for-forecasting/blob/master/images/Slide5.png)
 
